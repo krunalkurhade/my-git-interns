@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Time-Pass Arcade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <p class="eyebrow">A tiny browser game</p>
+    <h1>Mini Arcade 🎮</h1>
+    <p class="intro">Take a break. Pick a game and see how you do!</p>
+
+    <section class="card">
+      <h2>🔢 Guess the Number</h2>
+      <p>I'm thinking of a number from 1 to 100.</p>
+      <form id="guess-form">
+        <input id="guess-input" type="number" min="1" max="100" placeholder="Your guess" required>
+        <button type="submit">Guess</button>
+      </form>
+      <p id="guess-message" class="message" aria-live="polite">You have 7 attempts. Good luck!</p>
+      <button id="reset-guess" class="secondary">New number</button>
+    </section>
+
+    <section class="card">
+      <h2>✊ Rock, Paper, Scissors</h2>
+      <p>Choose your move and challenge the computer.</p>
+      <div class="moves">
+        <button class="move" data-move="rock">✊ Rock</button>
+        <button class="move" data-move="paper">✋ Paper</button>
+        <button class="move" data-move="scissors">✌️ Scissors</button>
+      </div>
+      <p id="rps-message" class="message" aria-live="polite">Make your move!</p>
+      <p class="score">You: <span id="you-score">0</span> · Computer: <span id="computer-score">0</span></p>
+      <button id="reset-rps" class="secondary">Reset score</button>
+    </section>
+
+    <footer>Made with HTML, CSS and JavaScript · No installs needed</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
